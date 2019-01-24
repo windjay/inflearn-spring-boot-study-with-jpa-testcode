@@ -14,7 +14,7 @@ public class SampleController {
   @Autowired
   SampleService sampleService;
 
-  @GetMapping("/hello")
+  @GetMapping("/sample_hello")
   public String hello() {
 
     logger.info("windjay");

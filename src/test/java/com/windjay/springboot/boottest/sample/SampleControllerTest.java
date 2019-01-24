@@ -31,7 +31,7 @@ public class SampleControllerTest {
   public void hello2() throws Exception {
     when(mockSampleService.getName()).thenReturn("windjay");
 
-    webTestClient.get().uri("/hello").exchange().expectStatus().isOk()
+    webTestClient.get().uri("/sample_hello").exchange().expectStatus().isOk()
             .expectBody(String.class).isEqualTo("hello windjay");
   }
 

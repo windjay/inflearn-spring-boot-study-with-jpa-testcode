@@ -29,7 +29,8 @@ public class UserControllerTest {
   }
 
   @Test
-  public void createUser_JSON() throws Exception{
+  public void createUser_JSON() throws Exception {
+    // 아래의 문자열 따옴표를 잘못 입력해서 오류가 생겼구만...
     String userJson ="{\"username\" : \"windjay\", \"password\": \"123\"}";
     mockMvc.perform(MockMvcRequestBuilders.post("/users/create")
             .contentType(MediaType.APPLICATION_JSON_UTF8)
@@ -38,6 +39,20 @@ public class UserControllerTest {
             .andExpect(status().isOk())
             .andExpect(jsonPath("$.username", is(equalTo("windjay"))))
             .andExpect(jsonPath("$.password", is(equalTo("123"))));
+
+  }
+
+  @Test
+  public void createUser_XML() throws Exception {
+    // 아래의 문자열 따옴표를 잘못 입력해서 오류가 생겼구만...
+    String userJson ="{\"username\" : \"windjay\", \"password\": \"123\"}";
+    mockMvc.perform(MockMvcRequestBuilders.post("/users/create")
+            .contentType(MediaType.APPLICATION_JSON_UTF8)
+            .accept(MediaType.APPLICATION_XML)
+            .content(userJson))
+            .andExpect(status().isOk())
+            .andExpect(xpath("/User/username").string("windjay"))
+            .andExpect(xpath("/User/password").string("123"));
 
   }
 

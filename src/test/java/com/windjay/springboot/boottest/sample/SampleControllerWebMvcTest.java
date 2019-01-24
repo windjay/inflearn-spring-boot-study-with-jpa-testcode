@@ -36,7 +36,7 @@ public class SampleControllerWebMvcTest {
   public void hello2() throws Exception {
     when(sampleService.getName()).thenReturn("windjay");
 
-    mockMvc.perform(MockMvcRequestBuilders.get("/hello")).andExpect(MockMvcResultMatchers.content().string("hello windjay"));
+    mockMvc.perform(MockMvcRequestBuilders.get("/sample_hello")).andExpect(MockMvcResultMatchers.content().string("hello windjay"));
 
     Assertions.assertThat(outputCapture.toString()).contains("windjay").contains("skip");
   }

@@ -25,7 +25,7 @@ public class SampleControllerMockTest {
 
   @Test
   public void hello() throws Exception {
-    mockMvc.perform(MockMvcRequestBuilders.get("/hello"))
+    mockMvc.perform(MockMvcRequestBuilders.get("/sample_hello"))
             .andExpect(MockMvcResultMatchers.status().isOk())
             .andExpect(MockMvcResultMatchers.content().string("hello windjay"))
             .andDo(MockMvcResultHandlers.print());

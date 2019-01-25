@@ -24,21 +24,21 @@ public class RedisRunner implements ApplicationRunner {
 
   @Override
   public void run(ApplicationArguments args) throws Exception {
-    ValueOperations<String, String> values = redisTemplate.opsForValue();
-    values.set("hello", "world");
-    values.set("springboot", "2.0");
-    values.set("windjay", "jayjay");
-
-
-    Book book = new Book();
-    book.setEmail("windjay@daum.net");
-    book.setUsername("windjay");
-
-    bookRepository.save(book);
-
-    Optional<Book> byId = bookRepository.findById(book.getId());
-    System.out.println(byId.get().getUsername());
-    System.out.println(byId.get().getEmail());
+//    ValueOperations<String, String> values = redisTemplate.opsForValue();
+//    values.set("hello", "world");
+//    values.set("springboot", "2.0");
+//    values.set("windjay", "jayjay");
+//
+//
+//    Book book = new Book();
+//    book.setEmail("windjay@daum.net");
+//    book.setUsername("windjay");
+//
+//    bookRepository.save(book);
+//
+//    Optional<Book> byId = bookRepository.findById(book.getId());
+//    System.out.println(byId.get().getUsername());
+//    System.out.println(byId.get().getEmail());
 
   }
 

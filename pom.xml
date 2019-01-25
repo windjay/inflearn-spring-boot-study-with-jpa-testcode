@@ -60,6 +60,11 @@
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-neo4j</artifactId>
+        </dependency>
+
         <!-- 내장용 테스트용 몽고DB -->
         <dependency>
             <groupId>de.flapdoodle.embed</groupId>

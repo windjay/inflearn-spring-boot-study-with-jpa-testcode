@@ -12,17 +12,19 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 @SpringBootApplication
 public class BootTestApplication {
 
+/*
   @Autowired
   MongoTemplate template;
 
   @Autowired
   MongoRepository repository;
+*/
 
   public static void main(String[] args) {
     SpringApplication.run(BootTestApplication.class, args);
   }
 
-  @Bean
+/*  @Bean
   public ApplicationRunner applicationRunner() {
     return args -> {
       Movie movie = new Movie();
@@ -33,7 +35,7 @@ public class BootTestApplication {
 
       System.out.println("finishied");
     };
-  }
+  }*/
 
 }
 

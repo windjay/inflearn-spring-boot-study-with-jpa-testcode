@@ -14,6 +14,7 @@ import java.sql.DatabaseMetaData;
 import java.sql.SQLException;
 
 import static org.assertj.core.api.Java6Assertions.assertThat;
+import static org.mockito.BDDMockito.given;
 
 /**
  * 아래는 슬라이싱 테스트이다..
